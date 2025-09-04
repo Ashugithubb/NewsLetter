@@ -1,0 +1,48 @@
+.mainBox {
+    padding: 64px 368px 64px 385px
+}
+
+.anyQuestion {
+    color: #FFF !important;
+    text-align: center !important;
+    font-family: Nunito !important;
+    font-size: 26px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+
+
+}
+
+.description {
+    text-align: center !important;
+    font-family: Nunito !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 150% !important;
+
+}
+
+.button {
+    border-radius: 0 10px 10px 0 !important;
+    background: #F1B300 !important;
+
+
+
+}
+
+.frame {
+    background-image: url("../../../public/Frame\ .png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.typographyText {
+    color: #1F1C14;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+
+}
