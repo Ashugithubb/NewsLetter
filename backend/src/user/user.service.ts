@@ -28,7 +28,7 @@ export class UserService {
       where: {
         email: email
       },
-      select: ["id", "email", "password", "name"]
+      select: ["id", "email", "password", "name","role"]
     })
   }
 

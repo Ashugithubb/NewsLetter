@@ -7,12 +7,11 @@ export class MailService {
   constructor(private readonly mailerService: MailerService) { }
   async sendNewsLetterMail(dto: CreateMailDto): Promise<void> {
     try {
-      console.log("mail dto:",dto);
       await this.mailerService.sendMail({
         to: dto.email,
         from: process.env.MAIL_USER,
         subject: 'New News Letter from Zenmonk',
-        template: './email',
+        template: 'email',
         context: {
           name: dto.name,
           content: dto.content,
