@@ -7,8 +7,8 @@ export default function FooterComponent() {
             <Box sx={{ display: "flex", padding: "80px", height: "411px" }}>
 
                 <Box sx={{ display: "flex", gap: "100px", height: "251px", justifyContent: "space-between" }}>
-                    <Box sx={{display:"flex",flexDirection:"column",gap:"9px"}}>
-                      <Box sx={{}}>  <img src="./Group2.svg" alt="logo" /></Box>
+                    <Box sx={{ display: "flex", flexDirection: "column", gap: "9px" }}>
+                        <Box sx={{}}>  <img src="./Group2.svg" alt="logo" /></Box>
                         <Box className={style.typographyText} sx={{ display: "flex", gap: "5px", flexDirection: "column" }}>
                             <Typography>2020 Edudu.co</Typography>
                             <Typography>Edudu is a registered trademark of Edudu.co</Typography></Box>

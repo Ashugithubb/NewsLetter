@@ -7,7 +7,7 @@ import z from 'zod';
 type emailFormData = z.infer<typeof emailSchema>;
 
 export const SubsriberThunk = createAsyncThunk(
-  'auth/signup',
+  'email/subscribe',
   async (data: emailFormData, thunkAPI) => {
     try {
       const response = await axios.post(
@@ -15,7 +15,6 @@ export const SubsriberThunk = createAsyncThunk(
         data,
         { withCredentials: true }
       );
-      console.log("backend msg",response.data);
       return response.data;
     } catch (error: any) {
       const errorMessage =

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 import storage from 'redux-persist/lib/storage'; 
 import { persistStore, persistReducer } from 'redux-persist';
-import mySessionReducer from '../slice/my.session.slice'
+import mySubscriberReducer from '../slice/my.subscriber.slice'
 
 
 const persistConfig = {
@@ -14,7 +14,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  myfeedback: mySessionReducer,
+  mySubscriber: mySubscriberReducer,
 });
 
   export type RootState = ReturnType<typeof rootReducer>;

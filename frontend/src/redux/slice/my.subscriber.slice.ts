@@ -27,35 +27,35 @@ const initialState: SessionState = {
   error: null,
 };
 
-export const getMySessionThunk = createAsyncThunk(
-  'myfeedback/getmyFeedback',
+export const getMySubscriberThunk = createAsyncThunk(
+  'mysubscriber/getmySubscriber',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:3001/session-table`, {
+      const response = await axios.get(`http://localhost:3001/subscriber`, {
         withCredentials: true,
       });
       console.log("res ssession",response.data)
       return response.data;
     } catch (error: any) {
-      return rejectWithValue(error.response?.data?.message || 'Failed to fetch students');
+      return rejectWithValue(error.response?.data?.message || 'Failed to fetch subscriber');
     }
   }
 );
-const mySessionSlice = createSlice({
-  name: 'myfeedbacklist',
+const mySubscriberSlice = createSlice({
+  name: 'mysubscriberlist',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getMySessionThunk .pending, (state) => {
+      .addCase(getMySubscriberThunk .pending, (state) => {
         state.loading = true;
         state.error = null;
       })
-      .addCase(getMySessionThunk .fulfilled, (state, action) => {
+      .addCase(getMySubscriberThunk .fulfilled, (state, action) => {
         state.loading = false;
         state.sessionlist = action.payload;
       })
-      .addCase(getMySessionThunk .rejected, (state, action) => {
+      .addCase(getMySubscriberThunk .rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload as string;
       });
@@ -63,4 +63,4 @@ const mySessionSlice = createSlice({
 });
 ;
 
-export default mySessionSlice.reducer;
+export default mySubscriberSlice.reducer;

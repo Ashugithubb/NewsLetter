@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>News Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f8fa;
+            padding: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Dear {{name}},</h2>
+        <button>Unsubscribe</button>
+        <p>{{content}}</p>
+        <div class="footer">
+            <p>{{year}} zenmonk.tech. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>

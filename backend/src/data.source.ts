@@ -4,6 +4,8 @@ import { SubscribersController } from 'src/subscribers/subscribers.controller';
 
 
 import { DataSource } from 'typeorm';
+import { User } from './user/entities/user.entity';
+import { NewsLetter } from './news-letters/entities/news-letter.entity';
 dotenv.config();
 const AppDataSource = new DataSource({
     type: 'postgres',
@@ -12,7 +14,7 @@ const AppDataSource = new DataSource({
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE,
-    entities: [Subscriber],
+    entities: [Subscriber,User,NewsLetter],
     migrations: [__dirname + '/migrations/*.{ts,js}'],
     synchronize: true,
 });
